@@ -18,16 +18,16 @@ example : Import to go
   import "github.com/sittipongwork/GoSitemapxml"
 ```
 
-### Create Sitemap Container
+### Full Example include Create Sitemap Container, Addsite, Parse struct to xml
 example
 ```go
   //Create Sitemap Container for keep data xml
   sitemap := gositemap.CreateSitemapContainer("https://www.sitemaps.org/schemas/sitemap/0.9")
 
   //Add Site you want to show in sitemap.xml
-	sitemap.AddSite("https://website.com/", "2016-11-23")
+  sitemap.AddSite("https://website.com/", "2016-11-23")
   //You can add more one site : Example
-	sitemap.AddSite("https://website.com/blog/1", "2016-11-23")
+  sitemap.AddSite("https://website.com/blog/1", "2016-11-23")
   sitemap.AddSite("https://website.com/blog/2", "2016-11-23")
   sitemap.AddSite("https://website.com/blog/3", "2016-11-23")
   sitemap.AddSite("https://website.com/contact", "2016-11-23")
@@ -39,7 +39,7 @@ example
 
   //NOTE : in iris framework
   //you can run command , Dont MashalIndent
-  //ctx.XML(iris.StatusOK, sitemap)
+  //iris.XML(iris.StatusOK, sitemap)
 ```
 
 
